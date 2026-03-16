@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() 
+{
+	int wahl;
+	double betrag;
+	const double kurs = 1.1547;
+	printf("1 = Euro in Dollar\n2 = Dollar in Euro\nIhre Wahl> ");
+	scanf("%i", &wahl);
+	
+	
+	if (wahl == 1) 
+	{
+		printf("Bitte Betrag in Euro eingeben> ");
+		scanf("%lf", &betrag);
+		printf("%.2lf Euro entsprechen %.2lf $\n", betrag, betrag * kurs);
+	}  
+	else if(wahl == 2) 
+	{
+		printf("Bitte Betrag in Dollar eingeben> ");
+		scanf("%lf", &betrag);
+		printf("%.2lf Dollar entsprechen %.2lf Euro\n", betrag, betrag / kurs);
+	} 
+	else
+	{
+		printf("Ungueltige Option");
+	}
+	
+	
+	
+	
+
+
+	return 0;
+}
